@@ -32,22 +32,22 @@ class Calculator:
 
     def power(self, x, y):
         self.check_types(x, y)
-        return x ** y
-    if y == 0:
+        if y == 0:
             raise TypeError("Potenciacion by zero is not possible")
+        return x ** y
     
     def raiz(self, x):
-        self.check_types(x)
-        return x * x   
-    if y == 0:
+        self.check_types(x)           
+        if y == 0:
             raise TypeError("raiz cuadrda by zero is not possible")
+        return x * x
     
     def algoritmo(self, x):
-        self.check_types(x)
-        return x / 10
-    if y == 0:
+        self.check_types(x)        
+        if y == 0:
             raise TypeError("Division by zero is not possible")
-
+        return x / 10
+    
     def check_types(self, x, y):
         if not isinstance(x, (int, float)) or not isinstance(y, (int, float)):
             raise TypeError("Parameters must be numbers")
