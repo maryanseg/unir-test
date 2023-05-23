@@ -15,8 +15,10 @@ class Calculator:
         return x - y
 
     def multiply(self, x, y):
-        # if not app.util.validate_permissions(f"{x} * {y}", "user1"):
-        #     raise InvalidPermissions('User has no permissions')
+        if not app.util.validate_permissions(f"{x} * {y}", "user1"):
+           raise InvalidPermissions('User has no permissions')
+        if y == 0:
+        raise TypeError("Multiplication by zero is not possible")
 
         self.check_types(x, y)
         return x * y
@@ -32,6 +34,15 @@ class Calculator:
         self.check_types(x, y)
         return x ** y
 
+    def raiz(self, x):
+        self.check_types(x)
+        return x * x   
+
+    def algoritmo(self, x):
+        self.check_types(x)
+        return x / 10
+    
+      
     def check_types(self, x, y):
         if not isinstance(x, (int, float)) or not isinstance(y, (int, float)):
             raise TypeError("Parameters must be numbers")
