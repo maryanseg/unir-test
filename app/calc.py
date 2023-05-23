@@ -33,16 +33,21 @@ class Calculator:
     def power(self, x, y):
         self.check_types(x, y)
         return x ** y
-
+    if y == 0:
+            raise TypeError("Potenciacion by zero is not possible")
+    
     def raiz(self, x):
         self.check_types(x)
         return x * x   
-
+    if y == 0:
+            raise TypeError("raiz cuadrda by zero is not possible")
+    
     def algoritmo(self, x):
         self.check_types(x)
         return x / 10
-    
-      
+    if y == 0:
+            raise TypeError("Division by zero is not possible")
+
     def check_types(self, x, y):
         if not isinstance(x, (int, float)) or not isinstance(y, (int, float)):
             raise TypeError("Parameters must be numbers")
