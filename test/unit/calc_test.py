@@ -51,6 +51,20 @@ class TestCalculate(unittest.TestCase):
         self.assertEqual(0, self.calc.multiply(-1, 0))
         self.assertEqual(-2, self.calc.multiply(-1, 2))
 
+    def test_add_results(self):
+        #Pruebas success 
+        self.assertEqual(4, self.calc.add(2, 2))
+        self.assertEqual(0, self.calc.add(2, -2))
+        self.assertEqual(0, self.calc.add(-2, 2))
+        self.assertEqual(1, self.calc.add(1, 0))                
+        #Pruebas with failures
+        self.assertRaises(TypeError, self.calc.add, "2", 2)
+        self.assertRaises(TypeError, self.calc.add, 2, "2")
+        self.assertRaises(TypeError, self.calc.add, "2", "2")
+        self.assertRaises(TypeError, self.calc.add, None, 2)
+        self.assertRaises(TypeError, self.calc.add, 2, None)
+        self.assertRaises(TypeError, self.calc.add, object(), 2)
+        self.assertRaises(TypeError, self.calc.add, 2, object())
 
 if __name__ == "__main__":  # pragma: no cover
     unittest.main()
