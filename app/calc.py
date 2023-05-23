@@ -38,13 +38,13 @@ class Calculator:
     
     def raiz(self, x):
         self.check_types(x)           
-        if y == 0:
+        if x == 0:
             raise TypeError("raiz cuadrda by zero is not possible")
         return x * x
     
     def algoritmo(self, x):
         self.check_types(x)        
-        if y == 0:
+        if x == 0:
             raise TypeError("Division by zero is not possible")
         return x / 10
     
