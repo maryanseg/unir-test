@@ -1,21 +1,21 @@
 web/constants.js
 
-.coverage
-coverage.xml
-*_result.xml
-*_result.html
-*_result.txt
-coverage/
-results/
-test/e2e/cypress/screenshots
-test/e2e/cypress/videos
+# .coverage
+# coverage.xml
+# *_result.xml
+# *_result.html
+# *_result.txt
+# coverage/
+# results/
+# test/e2e/cypress/screenshots
+# test/e2e/cypress/videos
 
-*.spec.js.mp4
+# *.spec.js.mp4
 
-__pycache__
-.pytest_cache
+# __pycache__
+# .pytest_cache
 
-sonar/
-.scannerwork/
+# sonar/
+# .scannerwork/
 
-jmeter.log
+# jmeter.log
