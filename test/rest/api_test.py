@@ -3,13 +3,13 @@ import os
 import unittest
 from urllib.request import urlopen
 
-#import pytest
+import pytest
 
 BASE_URL = os.environ.get("BASE_URL")
 DEFAULT_TIMEOUT = 2  # in secs
 
 
-@unittest.mark.api
+@pytest.mark.api
 class TestApi(unittest.TestCase):
     def setUp(self):
         self.assertIsNotNone(BASE_URL, "URL no configurada")

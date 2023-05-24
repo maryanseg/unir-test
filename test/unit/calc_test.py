@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch
 
-#import pytest
+import pytest
 
 from app.calc import Calculator
 
@@ -10,8 +10,8 @@ def mocked_validation(*args, **kwargs):
     return True
 
 
-#@pytest.mark.unit
-@unittest.mark.unit
+@pytest.mark.unit
+#@unittest.mark.unit
 class TestCalculate(unittest.TestCase):
     def setUp(self):
         self.calc = Calculator()
