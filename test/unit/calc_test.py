@@ -68,5 +68,23 @@ class TestCalculate(unittest.TestCase):
         self.assertRaises(TypeError, self.calc.add, object(), 2)
         self.assertRaises(TypeError, self.calc.add, 2, object())
 
+    def test_substract_method_returns_correct_result(self):
+        self.assertEqual(0, self.calc.substract(4, 4))
+        self.assertEqual(0, self.calc.substract(2, -2))
+        self.assertEqual(-4, self.calc.substract(-2, 2))
+        self.assertEqual(1, self.calc.substract(1, 0))
+
+    def test_power_method_returns_correct_result(self):
+        self.assertEqual(4, self.calc.power(4, 1))
+        self.assertEqual(4, self.calc.power(2, 2))
+    
+    def test_raiz_method_returns_correct_result(self):
+        self.assertEqual(4, self.calc.raiz(2))
+        self.assertEqual(25, self.calc.raiz(5))
+    
+    def test_algoritmo_method_returns_correct_result(self):
+        self.assertEqual(10, self.calc.algoritmo(100))
+        self.assertEqual(3, self.calc.algoritmo(30))
+
 if __name__ == "__main__":  # pragma: no cover
     unittest.main()
